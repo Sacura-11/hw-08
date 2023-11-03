@@ -5,10 +5,7 @@ import HomePage from "pages/Home/HomePage";
 import ContactsPage from "pages/Contacts/ContactsPage";
 import LoginPage from "pages/Login/LoginPage";
 import RegisterPage from "pages/Register/RegisterPage";
-import { ContactForm } from "./ContactForm/ContactForm";
-import { ContactList } from "./ContactList/ContactList";
-import { Filter } from "./Filter/Filter";
-import { Section } from "./Section/Section";
+
 
 export const App = () => {
 
