@@ -22,3 +22,7 @@ ul {
   list-style: none;
 }
 
+main {
+  max-width: 1080px;
+  margin: 0 auto  ;
+}
