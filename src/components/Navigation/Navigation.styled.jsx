@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
-export const Header = styled.header`
-  background-color: var(--bg);
-  box-shadow: var(--main-shadow);
-`;
+
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -25,7 +22,7 @@ export const NavList = styled.ul`
 
 export const NavItemLink = styled(NavLink)`
 padding: 10px;
-color: white;
+color: black;
 
 border: 1px solid black;
 border-radius: 15px;
@@ -37,22 +34,22 @@ transition: all 350ms linear;
 
 &.active {
     border: 1px solid white;
-  background-color: #000;
+  background-color: linear-gradient(45deg, red, blue);
   color: white;
   border-radius: 15px;
 }
 
   :hover: {
     border: 1px solid white;
-  background-color: #000;
-  color: white;
+  background-color: linear-gradient(45deg, red, blue);;
+  color: linear-gradient(45deg, red, blue);;
   border-radius: 15px;
   }
 
   :focus {
     border: 1px solid white;
-  background-color: #000;
-  color: white;
+  background-color: linear-gradient(45deg, red, blue);;
+  color: linear-gradient(45deg, red, blue);;
   border-radius: 15px;
   }
 `;

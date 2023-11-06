@@ -1,9 +1,18 @@
 .form{
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10px;
+
+    padding: 15px;
+    border-radius: 15px;
+
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .formLabel {
@@ -24,12 +33,11 @@
     height: 25px;
     border: 1px solid black;
     border-radius: 6px;
-
-    font-size: 18px;
     background: transparent;
+
+    font-size: 16px;
     
 }
-
 
 .formInput:hover,
 .formInput:focus {
@@ -37,18 +45,17 @@
     background: transparent;
 }
 
-.saveButton {
+.signButton {
     margin-top: 20px;
     width: 100px;
     height: 30px;
-    background-color: #fff;
+    background-color: transparent;
     border: 1px solid black;
     border-radius: 10px;
-    background: transparent;
 }
 
-.saveButton:hover,
-.saveButton:focus {
+.signButton:hover,
+.signButton:focus {
     border: 1px solid black;
     background-color: black;
     color: #fff;

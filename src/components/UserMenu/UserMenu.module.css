@@ -1,0 +1,42 @@
+.userNavList {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  
+    text-decoration: none;
+  }
+  
+.loginedUserTitle{
+    color: black;
+    font-size: 14 px;
+  }
+  
+  .loginedUser {
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .logOutButton {
+    padding: 10px;
+  
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 15px;
+  
+    transition: all 350ms linear;
+    font-size: 16px;
+  }
+  
+  .logOutButton:hover,
+  .logOutButton:focus {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+  }
+  
+  

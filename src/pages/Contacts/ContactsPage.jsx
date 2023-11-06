@@ -8,25 +8,28 @@ import { fetchContacts } from 'redux/contactsOperations'
 
 import css from './ContactsPage.module.css';
 
-const ContactsPage = () => {
+export const ContactsPage = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-      dispatch(fetchContacts());
+        dispatch(fetchContacts());
     }, [dispatch]);
 
-  return (
-    <div className={css.container}>
-    <h1>ContactsPage</h1>
+    return (
+        <div className={css.container}>
+           <div className={css.sectionContainer}>
+           <h2 className={css.title}>Add new contact</h2>
+            <ContactForm />
+           </div>
 
-      <ContactForm />
+            <div className={css.sectionContainer}>
+            <h2 className={css.title}>Contacts list</h2>
+            <Filter />
+            <ContactList />
+            </div>
+        </div>
 
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactList />
-    </div>
-
-  )
+    )
 }
 
 export default ContactsPage

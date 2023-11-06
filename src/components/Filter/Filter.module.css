@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
 
@@ -14,11 +13,17 @@
 }
 
 .filterInput {
-    width: 50%;
-    border: 1px solid grey;
+  height: 25px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 6px;
+  background: transparent;
+
+  font-size: 18px;
 }
 
 .filterInput:hover,
-.filterInput:focus  {
-    border: 2px solid tomato;
+.filterInput:focus {
+  border: 2px solid black;
+  background: transparent;
 }

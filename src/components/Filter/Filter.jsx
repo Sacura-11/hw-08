@@ -1,11 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
 import css from './Filter.module.css';
-import { getFilter } from 'redux/selectors';
 import { setFilter } from 'redux/filterSlice';
+import { getFilter } from 'redux/selectors';
 
 export const Filter = () => {
     const dispatch = useDispatch();
-    const filter = useSelector(getFilter);
+  const filter = useSelector(getFilter);
+
+  const handleFilterChange = event => {
+    return dispatch(setFilter(event.target.value));
+  };
+    
 
     return (
         <div className={css.filterContainer}>
@@ -15,7 +20,7 @@ export const Filter = () => {
                 type="text"
                 id="filter"
                 value={filter}
-                onChange={e => dispatch(setFilter(e.currentTarget.value))} />
+                onChange={handleFilterChange} />
         </div>
     );
 };

@@ -8,24 +8,25 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-// import storage from 'redux-persist/lib/storage';
-// import { filterReducer } from './filter/slice';
-// import { contactReducer } from './contacts/slice';
-// import { authReducer } from './auth/slice';
+
 import { contactsReducer } from './contactsSlice';
 import { filterReducer } from './filterSlice';
+import { authReducer } from './authSlice';
+import storage from 'redux-persist/lib/storage';
+import persistReducer from 'redux-persist/es/persistReducer';
 
-// const authPersistConfig = {
-//   key: 'auth',
-// //   storage,
-// //   whitelist: ['token'],
-// };
+
+const authConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['token'],
+};
 
 export const store = configureStore({
   reducer: {
-    // auth: persistReducer(authPersistConfig, authReducer),
-    contacts: contactsReducer,
+    phonebook: contactsReducer,
     filter: filterReducer,
+    auth: persistReducer(authConfig, authReducer)
   },
 
   middleware: getDefaultMiddleware =>

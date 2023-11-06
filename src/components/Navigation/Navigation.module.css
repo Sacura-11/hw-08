@@ -1,0 +1,44 @@
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.header {
+  border: 2px solid black;
+  border-radius: 15px;
+  /* background-color: black; */
+}
+
+.navList {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  text-decoration: none;
+}
+
+.navListItem {
+  text-decoration: none;
+  list-style-type: none;
+
+  color: black;
+}
+
+.navigationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userNavList {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  text-decoration: none;
+
+}
+
