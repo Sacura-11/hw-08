@@ -67,10 +67,12 @@
 
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact, fetchContacts } from 'redux/contactsSlice';
 
 import css from './ContactForm.module.css';
+import { selectContacts } from 'redux/contacts.selectors';
+import { Notify } from 'notiflix';
 
 export const ContactForm = () => {
   const {
@@ -81,13 +83,28 @@ export const ContactForm = () => {
   } = useForm();
 
   const dispatch = useDispatch();
+  const contacts = useSelector(selectContacts);
 
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  const onSubmit = contact => {
-    dispatch(addContact(contact));
+  // const onSubmit = contact => {
+  //   dispatch(addContact(contact));
+  //   reset();
+  // };
+
+  const onSubmit = (values) => {
+    const newContact = {
+      name: values.name,
+      number: values.number,
+    };
+
+    if (contacts.find(contact => contact.name === newContact.name)) {
+      return Notify.failure(`${newContact.name} is already in contacts`);
+    }
+
+    dispatch(addContact(newContact));
     reset();
   };
 

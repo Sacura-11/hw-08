@@ -9,13 +9,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: linear-gradient(to right bottom, #d6c2e3, #bd9bdd, #a075d8, #7a51d4, #442fd0);
-
-
-  height: 100vh;
+  /* background-image: linear-gradient(to right bottom, #d6c2e3, #bd9bdd, #a075d8, #7a51d4, #442fd0);
+  height: 100vh; */
   
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 350s ease infinite;
+	height: 100vh;
 
 }
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -32,8 +32,9 @@
 
 .deleteButton:hover,
 .deleteButton:focus {
-  rotate: 180deg;
-  font-size: 30px;
+  /* rotate: 180deg;
+  font-size: 30px; */
+  color: rgb(180, 43, 43);
 }
 
 
